@@ -83,6 +83,38 @@ function eje7(){}
 
 function eje8(){}
 
+function Persona(nombre,edad,genero) {
+    this.nombre = nombre;
+    this.edad = edad;
+    this.genero = genero;
+}
+
+Persona.prototype.Detalles = function name(params) {
+    console.log("el nombre es: "+this.nombre+"mi edad es "+this.edad+"y mi genero es "+this.genero)
+}
+
+function Estudiante(nombre,edad,genero,curso,grupo){
+    Persona.call(this,nombre,edad,genero)
+    this.curso = curso;
+    this.grupo = grupo;
+}
+    Persona.prototype.registrar = function name(params) {
+        console.log("el nombre es: "+this.curso+"y mi genero es "+this.grupo)
+    }
+
+    Estudiante.prototype = Object.create(Persona.prototype)
+
+function Profesor(nombre,edad,genero,asignatura,nivel){
+    Persona.call(this,nombre,edad,genero)
+    this.asignatura = asignatura;
+    this.nivel = nivel;
+}
+    Persona.prototype.asignar = function name(params) {
+        console.log("el nombre es: "+this.asignatura+"y mi genero es "+this.nivel)
+    }
+
+    Profesor.prototype = Object.create(Persona.prototype)
+
 function eje9(){}
 
 function eje10(){}

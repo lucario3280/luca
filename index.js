@@ -79,9 +79,31 @@ function eje6(){
     }
 }
 
-function eje7(){}
+function eje7(){
+    var texto = prompt("Pone algo")
+    if(texto == texto.toUpperCase()){
+        console.log("Son Todas Mayusculas")
+    }
+    else if(texto == texto.toLowerCase()){
+        console.log("Son Todas Minusculas")
+    }
+    else{
+        console.log("Es una combinacion")
+    }
+}
 
-function eje8(){}
+function eje8(){
+    let pali = prompt("Ponga Un Palindromo")
+    let paliSinEspacios = pali.replace(" ", "")
+    let ilap = paliSinEspacios.split("").reverse().join("");
+    if(paliSinEspacios == ilap){
+        console.log("Es Un Palindromo")
+    }
+    else{
+        console.log("No Es Un Palindromo")
+    }
+}
+
 
 function Persona(nombre,edad,genero) {
     this.nombre = nombre;
@@ -117,4 +139,16 @@ function Profesor(nombre,edad,genero,asignatura,nivel){
 
 function eje9(){}
 
-function eje10(){}
+function eje10(){
+    let arr = [0,0,0,0,0,0,0,0,0,0,0,0,0]
+    for(let i=1;i<= 36000;i++){
+    var dado1 = Math.floor(Math.random()*6)+1;
+    var dado2 = Math.floor(Math.random()*6)+1;
+    var dado = dado1 + dado2;
+    arr[dado]++;
+    }
+
+    for (let j = 0; j < arr.length; j++) {
+        console.log("El numero "+ j +"salio "+arr[j]+" numero de veces")
+    }
+}
